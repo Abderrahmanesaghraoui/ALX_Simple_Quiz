@@ -13,7 +13,9 @@ function checkAnswer(){
 
     // Check if the user's answer is correct
     if(userAnswer === correctAnswer){
-        feedbackElement.textContent = "That's incorrect. Try again!";
+        feedbackElement.textContent = "Correct! Well done.";
+    } else{
+        feedbackElement.textContent = "That's incorrect. Try again!"
     }
 }
 // Add an event listener to the Submit Answer button
