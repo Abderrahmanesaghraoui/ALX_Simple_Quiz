@@ -14,8 +14,13 @@ function checkAnswer(){
     // Check if the user's answer is correct
     if(userAnswer === correctAnswer){
         feedbackElement.textContent = "Correct! Well done.";
-    } else{
+        feedbackElement.style.color = "green";
+    } else if (userAnswer === null) {
+        feedbackElement.textContent = "please select an answer!"
+        feedbackElement.style.color = "orange"
+    } else {
         feedbackElement.textContent = "That's incorrect. Try again!"
+        feedbackElement.style.color = "red"
     }
 }
 // Add an event listener to the Submit Answer button
